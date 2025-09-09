@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 
 const App: React.FC = () => {
+  // State điều khiển panel
+  const [isRightPanelActive, setIsRightPanelActive] = useState(false);
+
   return (
-    <div className="container" id="container">
+  
+    <div
+      className={`container ${isRightPanelActive ? "right-panel-active" : ""}`}
+      id="container"
+    >
       {/* Register Form */}
       <div className="form-container register-container">
         <form action="#">
@@ -35,8 +42,8 @@ const App: React.FC = () => {
           <input type="password" placeholder="Password" />
           <div className="content">
             <div className="checkbox">
-              <input type="checkbox" name="checkbox" id="checkbox" />
-              <label htmlFor="checkbox">Remember me</label>
+              <input type="checkbox" name="remember" id="remember" />
+              <label htmlFor="remember">Remember me</label>
             </div>
             <div className="pass-link">
               <a href="#">Forgot password?</a>
@@ -66,7 +73,11 @@ const App: React.FC = () => {
               Hello <br /> friends
             </h1>
             <p>If you have an account, login here and have fun</p>
-            <button className="ghost" id="login">
+            <button
+              className="ghost"
+              id="login"
+              onClick={() => setIsRightPanelActive(false)}
+            >
               Login <i className="lni lni-arrow-left login"></i>
             </button>
           </div>
@@ -77,13 +88,18 @@ const App: React.FC = () => {
             <p>
               If you don't have an account yet, join us and start your journey.
             </p>
-            <button className="ghost" id="register">
+            <button
+              className="ghost"
+              id="register"
+              onClick={() => setIsRightPanelActive(true)}
+            >
               Register <i className="lni lni-arrow-right register"></i>
             </button>
           </div>
         </div>
       </div>
     </div>
+  
   );
 };
 

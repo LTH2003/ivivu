@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap");
+
 
 * {
   box-sizing: border-box;
@@ -16,13 +17,16 @@ body {
 }
 
 h1 {
+  color: #000;
   font-weight: 700;
   letter-spacing: -1.5px;
   margin: 0;
   margin-bottom: 15px;
+  
 }
 
 h1.title {
+  color: #000;
   font-size: 45px;
   line-height: 45px;
   margin: 0;
@@ -30,6 +34,7 @@ h1.title {
 }
 
 p {
+  color: #000;
   font-size: 14px;
   font-weight: 100;
   line-height: 20px;
@@ -39,6 +44,7 @@ p {
 }
 
 span {
+  color: #000;
   font-size: 14px;
   margin-top: 25px;
 }
@@ -311,4 +317,33 @@ input {
 
 .social-container a:hover {
   border: 1px solid #4bb6b7;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* khoảng cách giữa ô vuông và chữ */
+}
+
+.checkbox input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.checkbox label {
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+}
+
+.container h1 {
+  font-size: 40px;
+}
+
+.overlay h1,
+.overlay p,
+.overlay span {
+  color: #fff;
+  text-shadow: none;
 }

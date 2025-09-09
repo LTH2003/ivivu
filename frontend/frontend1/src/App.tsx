@@ -1,6 +1,5 @@
 import React from "react";
 import "./App.css";
-import './assets/script.tsx'
 
 const App: React.FC = () => {
   return (
